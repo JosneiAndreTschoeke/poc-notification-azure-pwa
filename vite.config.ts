@@ -9,7 +9,8 @@ import { VitePWA } from 'vite-plugin-pwa'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue(), 
+  plugins: [
+    vue(),
     vueDevTools(),
     VitePWA({
       registerType: 'autoUpdate',
@@ -17,19 +18,19 @@ export default defineConfig({
         // Configurações do Workbox
       },
       devOptions: {
-        enabled: true, // Ativa o Service Worker em modo de desenvolvimento
+        enabled: true // Ativa o Service Worker em modo de desenvolvimento
       },
       manifest: {
-        name: 'My PWA',
-        short_name: 'PWA',
-        description: 'My Progressive Web App',
+        short_name: 'CONDEN 3 - Poc Notificação',
+        name: 'CONDEN 3 - Poc Notificação',
+        description: 'App para demonstração e prova de conceito.',
         start_url: '/',
         display: 'standalone',
         background_color: '#ffffff',
         theme_color: '#3e4eb8',
         icons: [
           {
-            src: '/icon-192x192.png',
+            src: '/img/icons/android-icon-192x192.png',
             sizes: '192x192',
             type: 'image/png'
           },
